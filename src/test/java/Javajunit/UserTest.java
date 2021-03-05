@@ -21,18 +21,32 @@ public class UserTest {
             boolean result = user.Validfirstname("mon");
             Assertions.assertFalse(result);
         }
-    @Test
-    public void lastnametruetest() {
+        @Test
+        public void lastnametruetest() {
         Userregistration user = new Userregistration();
         boolean result = user.Validlastname("Salaskar");
         Assertions.assertTrue(result);
 
-    }
-    @Test
-    public void lastnamefalsetest() {
+        }
+        @Test
+        public void lastnamefalsetest() {
         Userregistration user = new Userregistration();
         boolean result = user.Validlastname("Ken");
         Assertions.assertFalse(result);
 
-    }
+        }
+        @Test
+        public void emailtruetest() {
+        Userregistration user = new Userregistration();
+        boolean result = user.Validemail("vishal@gmail.com");
+        Assertions.assertTrue(result);
+
+        }
+        @Test
+        public void emailfalsetest() {
+        Userregistration user = new Userregistration();
+        boolean result = user.Validemail("rahul.com");
+        Assertions.assertFalse(result);
+
+        }
 }

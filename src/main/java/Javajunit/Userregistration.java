@@ -18,4 +18,11 @@ public class Userregistration {
             return m.find();
 
         }
+        public static boolean Validemail(String name) {
+        String regex = "^(.+)@(.+)$";
+
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        return m.find();
+        }
 }
