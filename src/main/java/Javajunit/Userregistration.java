@@ -25,4 +25,11 @@ public class Userregistration {
         Matcher m = p.matcher(name);
         return m.find();
         }
+        public static boolean Validphoneno(String name) {
+        String regex = "^[0-9]+\\s[0-9]{10}$";
+
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        return m.find();
+       }
 }

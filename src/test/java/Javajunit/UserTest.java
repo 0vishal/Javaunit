@@ -49,4 +49,18 @@ public class UserTest {
         Assertions.assertFalse(result);
 
         }
+        @Test
+        public void phonenotruetest() {
+                Userregistration user = new Userregistration();
+                boolean result = user.Validphoneno("91 9167965231");
+                Assertions.assertTrue(result);
+
+        }
+        @Test
+        public void phonenofalsetest() {
+                Userregistration user = new Userregistration();
+                boolean result = user.Validphoneno("909123454337834");
+                Assertions.assertFalse(result);
+
+        }
 }
