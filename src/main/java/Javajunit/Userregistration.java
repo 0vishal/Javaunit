@@ -32,4 +32,12 @@ public class Userregistration {
         Matcher m = p.matcher(name);
         return m.find();
        }
+        public static boolean Validpassword(String name)
+        {
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$)[A-za-z0-9].{8,}$";
+
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        return m.find();
+        }
 }

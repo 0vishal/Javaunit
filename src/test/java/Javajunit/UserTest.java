@@ -63,4 +63,18 @@ public class UserTest {
                 Assertions.assertFalse(result);
 
         }
+        @Test
+        public void passwordtruetest() {
+                Userregistration user = new Userregistration();
+                boolean result = user.Validpassword("Kaizen#2234");
+                Assertions.assertTrue(result);
+
+        }
+        @Test
+        public void passwordfalsetest() {
+                Userregistration user = new Userregistration();
+                boolean result = user.Validpassword("panface");
+                Assertions.assertFalse(result);
+
+        }
 }
